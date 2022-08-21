@@ -1,9 +1,74 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: sans-serif;
+}
+
+
 body {
-    margin: 0
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, rgb(58, 241, 58), rgb(60, 60, 247));
+}
+
+h1 {
+    text-align: center;
 }
 
 .main-box {
-    width: 200px;
-    height: 200px;
-    background-color: black;
+    
+    
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px,auto) repeat(5, 100px);
+
+    
+}
+
+
+
+.main-box > button {
+cursor: pointer;
+font-size: 2rem;
+border: 1px solid black;
+outline: none;
+background-color: rgba(202, 187, 187, 0.6);
+
+}
+
+.main-box > button:hover {
+background-color: azure;
+
+}
+
+.two-rows {
+    
+   grid-column: span 2;
+}
+
+.screen {
+    grid-column: 1/ -1;
+    background: rgba(0,0,0, .65);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 8px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.screen .prev-calc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.5rem;
+}
+
+
+.screen .next-calc {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 3.5rem;
 }
